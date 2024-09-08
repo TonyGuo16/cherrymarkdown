@@ -1,2 +1,2 @@
 # cherrymarkdown
-Most Convenience Way to Implement MarkDown in Maui Blazor / Blazor
+How to Add MarkDown in Maui Blazor / Blazor
