@@ -7,9 +7,8 @@ Step 1:
 
 1. Import the Cherry Markdown.js and cherrymarkdown.css into the Maui Blazor project, open the project and put the cherrymarkdown.js in the Index.html.
 
-::: primary File Content Path
+File Content Path
 **Project Root: wwwroot/index.hml;**
-:::
 
 ```html
 <head>
@@ -42,9 +41,8 @@ Step 1:
 </html>
 ```
 Step 2:
-::: primary File Content Path
+File Content Path
 **Project Root: Components/Pages/Home.razor**
-:::
 
 1. Open the Home.razor, and replace the code with the below.<br>
 
@@ -117,14 +115,14 @@ Step 2:
 }
 ```
 Step 3:
-::: danger Important Tips
 DON'T FORGET TO PUT THE !!#ff0000 !!!#ffffff ch-icon.woff2!!!!! INTO wwwrooor/css/fonts FILE !!!!
-:::
 If without this fonts file, the markdown components icon will not show normally.
 
 Step 4:
-You could copy our Home.razor.js in the Components/Pages, or You can create a new javascript file under the name of Homr.razor.js, it will automatically connected with the Home.razor, add the code below:
+You could copy our Home.razor.js in the Components/Pages, or You can create a new javascript file under the name of Home.razor.js, it will automatically connected with the Home.razor, add the code below:
+
 For more config Settings, pls check https://github.com/Tencent/cherry-markdown/wiki/%E9%85%8D%E7%BD%AE%E9%A1%B9%E5%85%A8%E8%A7%A3
+
 ```javascript
 export function ShowCherryMarkdown() {
     const cherryInstance = new Cherry({
@@ -171,12 +169,10 @@ export function ShowCherryMarkdown() {
 }
 ```
 Step 4:
-::: success Debug and Run
+Debug and Run
 Enjoy your markdown in your Maui Blazor / Blazor Projects, this projects ReadMe.md is created by this MarkDown components.
-:::
 
 If this tourial is helpful to you , please kindly feel free to check and expolore our home page, we will be very grateful.
 
-::: center  
 [Home Medical Device Expert - Hangzhou Wecareu Electronics Technology Co.,Ltd](https://www.wedocareu.com) 
-:::
+
