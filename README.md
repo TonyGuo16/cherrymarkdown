@@ -115,7 +115,7 @@ File Content Path
 }
 ```
 Step 3:<br>
-DON'T FORGET TO PUT THE !!#ff0000 !!!#ffffff ch-icon.woff2!!!!! INTO wwwrooor/css/fonts FILE !!!!
+DON'T FORGET TO PUT THE     ch-icon.woff2     INTO wwwrooor/css/fonts FILE !!!!
 If without this fonts file, the markdown components icon will not show normally.
 
 Step 4:<br>
