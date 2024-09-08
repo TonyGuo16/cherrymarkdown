@@ -40,7 +40,7 @@ File Content Path
 
 </html>
 ```
-Step 2:
+Step 2:<br>
 File Content Path
 **Project Root: Components/Pages/Home.razor**
 
@@ -114,11 +114,11 @@ File Content Path
     }
 }
 ```
-Step 3:
+Step 3:<br>
 DON'T FORGET TO PUT THE !!#ff0000 !!!#ffffff ch-icon.woff2!!!!! INTO wwwrooor/css/fonts FILE !!!!
 If without this fonts file, the markdown components icon will not show normally.
 
-Step 4:
+Step 4:<br>
 You could copy our Home.razor.js in the Components/Pages, or You can create a new javascript file under the name of Home.razor.js, it will automatically connected with the Home.razor, add the code below:
 
 For more config Settings, pls check https://github.com/Tencent/cherry-markdown/wiki/%E9%85%8D%E7%BD%AE%E9%A1%B9%E5%85%A8%E8%A7%A3
@@ -168,7 +168,7 @@ export function ShowCherryMarkdown() {
     });
 }
 ```
-Step 4:
+Step 5:<br>
 Debug and Run
 Enjoy your markdown in your Maui Blazor / Blazor Projects, this projects ReadMe.md is created by this MarkDown components.
 
