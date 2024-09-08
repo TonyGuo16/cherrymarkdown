@@ -1,0 +1,15 @@
+﻿@page "/counter"
+
+<div class="theme__red">
+    <CherryMarkdown style="height: 400px" class="theme__light" />
+
+</div>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

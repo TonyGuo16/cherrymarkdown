@@ -1,0 +1,66 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@implements IDisposable
+
+<div>
+    <div id="markdown-container"></div>
+</div>
+
+@code{
+    /// <summary>
+    /// JS Module
+    /// </summary>
+    private IJSObjectReference? Module;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Module = await JSRuntime.InvokeAsync<IJSObjectReference>(
+    "import", "./Components/Pages/Home.razor.js");
+            await Module.InvokeVoidAsync("ShowCherryMarkdown");
+
+        }
+    }
+    /// <summary>
+    /// diposing sign
+    /// </summary>
+    private bool _disposing;
+    /// <summary>
+    /// Disposing
+    /// </summary>
+    /// <param name="disposing"></param>
+    protected virtual void Dispose(bool disposing)
+    {
+        _disposing = true;
+        if (disposing)
+        {
+            if (Module != null)
+            {
+                try
+                {
+                    Module.DisposeAsync();
+                }
+                catch (JSDisconnectedException)
+                {
+                    //System.Console.WriteLine($"JS failed:{ex} ");
+                }
+                finally
+                {
+                    if (Module != null)
+                    {
+                        Module = null;
+                    }
+                }
+            }
+        }
+    }
+    /// <summary>
+    /// Dispose Resource
+    /// </summary>
+    /// <returns></returns>
+    void IDisposable.Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+}
